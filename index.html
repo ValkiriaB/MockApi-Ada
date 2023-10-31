@@ -17,7 +17,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg "style="background-color: #ed7155">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Career</a>
+          <a class="navbar-brand" href="#">Career 💼</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,7 +32,9 @@
       </nav>
 
       <!-- Filters -->
-      <div id="select" style="margin-left: 18%; margin-top: 60px;">
+
+      <section class="hidden" id="select" style="margin-left: 18%; margin-top: 5%; ">
+      
       <select id="Location" class="form-select w-25 p-3 d-inline grid gap-3" aria-label="Default select example">
         <option selected>Location</option>
         <option value="Remote">Remote</option>
@@ -65,8 +67,8 @@
       <button type="button" id="search-btn" class="btn btn-dark" >Search</button>
       <button type="button" id="clear-btn" class="btn btn-outline-dark">Clear</button>
 
-      </div>
-
+      
+    </section>
 
     <main class="container  align-items-center" >
      <span id="spinner" class="view loader "></span>
@@ -79,8 +81,16 @@
 
       <section  class="view w-75 d-flex flex-column justify-content-center visually-hidden " id="job-create"> 
        <form class=" grid gap-3" id="formulario">
-        <div class="mb-3 ">
 
+        <div class="mb-3 ">
+         <label for="job-image" class="form-label ">
+          Image
+        </label>
+        <input type="url" class="form-control" id="job-image" aria-describedby="job-image" placeholder="image">
+        </div>
+       
+        <div class="mb-3 ">
+         
           <label for="Job-title" class="form-label">Job Title</label>
           <input type="text" class="form-control" id="Job-title">
         </div>
@@ -105,7 +115,11 @@
           <label for="add-category" class="form-label">Category</label>
           <input type="text" class="form-control" id="add-category">
         </div>
-
+        
+        <div class="mb-3 ">
+          <label for="add-long-term" class="form-label">Long term</label>
+          <input type="text" class="form-control" id="add-long-term">
+        </div>
         <div class=" row g-2 mt-4 mb-3">
           <h6>Benefits:</h6>
       
@@ -145,25 +159,17 @@
           <h6>Languages:</h6>
           <div class="col-md" style="width: 10rem;">
             <label for="add-languages-1" class="form-label"></label>
-            <input type="text" class="form-control" id="add-languages-1" >
+            <input type="text" class="form-control" id="add-languages" >
           </div> 
-          
-          <div class="col-md" style="width: 10rem;">
-          <label for="add-languages-2" class="form-label"></label>
-          <input type="text" class="form-control" id="add-languages-2" >
-          </div>
-
-            <div class="col-md" style="width: 10rem;">
-            <label for="add-languages-3" class="form-label"></label>
-            <input type="text" class="form-control" id="add-languages-3" >
-            </div>
-           
+    
         </div> 
   
-        <button class="btn btn-primary" id="submit-btn" type="submit">Submit</button>
+        <button class="btn btn-primary" id="submit-btn" type="button">Submit</button>
       </form>
 
       </section>
+
+
 
     <!-- Edit Jobs -->
 

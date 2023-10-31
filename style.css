@@ -2,6 +2,10 @@
     margin-top: 80px;
 }
 
+.hidden{
+  display: none;
+}
+
 #image-job{
     width: 100%;
     height: 40%;
@@ -25,11 +29,16 @@
   border-radius: 5px;
 }
 
+#job-create{
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
 
 #spinner{
    
-    margin-left: 30rem;
-     margin-top: 20px;
+    margin-left: 33rem;
+    margin-top: 10%;
    }
    .loader {
      width: 48px;
@@ -67,22 +76,22 @@
        box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
      }
      12% {
-       box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+       box-shadow: 0 24px #ed7155, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
      }
      25% {
-       box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+       box-shadow: 0 24px #ed7155 24px 24px #ed7155, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
      }
      37% {
-       box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
+       box-shadow: 0 24px #ed7155, 24px 24px #ed7155, 24px 48px #ed7155, 0px 48px rgba(255, 255, 255, 0);
      }
      50% {
-       box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
+       box-shadow: 0 24px #ed7155, 24px 24px #ed7155, 24px 48px #ed7155, 0px 48px #ed7155;
      }
      62% {
-       box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
+       box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px #ed7155, 24px 48px #ed7155, 0px 48px #ed7155;
      }
      75% {
-       box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
+       box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px #ed7155, 0px 48px #ed7155;
      }
      87% {
        box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;

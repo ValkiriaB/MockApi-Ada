@@ -11,16 +11,26 @@ const showView = (view) => {
 $("#home").addEventListener("click", () => getJobs());
 $("#show").addEventListener("click", () => ShowForm());
 
+
 const ShowForm = () => {
-  showView("job-create")
-   
+  showView("job-create"),
+  hideSelect()
 }
 
- // 
+
+// Hide select 
+const showSelect = () => {
+  $("#select").classList.remove("hidden");
+}
+
+const hideSelect = () => {
+  $("#select").classList.add("hidden");
+}
+
+
 // Show the jobs in cards
 const renderJobs= (jobs) => {
-
-  
+  showSelect()
     $("#list-jobs").innerHTML= "";
     if(jobs) {
         showView("list-jobs");
@@ -57,7 +67,7 @@ const DetailJobs = ({
     salary,
     benefits:{vacation,health_ensurance,birth_license,additional,internet_paid}
   }) => {
-   
+    hideSelect()
     showView("detail-jobs")
     $("#detail-jobs").innerHTML = `
    
@@ -89,6 +99,10 @@ const DetailJobs = ({
   }
     
 // Alert btn Cancel 
+
+
+
+
 
 //Filter
 
@@ -128,7 +142,7 @@ const jobsFiltered = (jobs) =>{
   return jobs
 } 
 // Search button
-$("#search-btn").addEventListener("click", () => getJobsFiltered());
+$("#search-btn").addEventListener("click", () => jobsfiltered());
  
 
 // clean the filter
@@ -141,6 +155,62 @@ $("#clear-btn").addEventListener("click", () => {
 
 
 //New Job
+
+
+const addjob = () => {
+ 
+  let newjob = {
+      image: $("#job-image").value,
+      name: $("#Job-title").value,
+      description: $("#Description").value,
+      location: $("#add-location").value,
+      category: $("#add-category").value,
+      seniority: $("#add-seniority").value,
+      benefits: {
+      vacation: $("#add-vacation").value,
+      health_ensurance:$("#add-health-ensurance").value,
+      birth_license:$("#add_license").value,
+      additional:$("#add-additional").value,
+      internet_paid:$("#add-internet").value,
+      },
+      salary: $("#add-salary").value,
+      languages: $("#add-languages").value,
+      long_term: $("#add-long-term").value,
+    
+  };
+  addingJob(newjob);
+};
+
+$("#submit-btn").addEventListener("click", () => {
+  addjob()
+  cleanForm()
+})
+
+
+// Clean Form
+
+const cleanForm = () => {
+
+   $("#job-image").value= "";
+   $("#Job-title").value = "";
+   $("#Description").value= "";
+   $("#add-location").value= "";
+   $("#add-category").value= "";
+   $("#add-seniority").value= "";
+   $("#add-vacation").value= "";
+   $("#add-health-ensurance").value = "";
+   $("#add_license").value= "";
+   $("#add-additional").value= "";
+   $("#add-internet").value= "";
+   $("#add-salary").value= "";
+   $("#add-languages").value= "";
+   $("#add-long-term").value= "";
+
+
+}
+
+
+
 const FormEdit = ({
 
   id,
@@ -199,13 +269,3 @@ const FormEdit = ({
 
 
 
-// Me falta la funcion para:
-// 1)buscar por los tres select(si)
-// 2) editar(parcialmente)
-// 3)eliminar(si)
-// Alert en eliminar
-// cancel vuelve a get job
-// 4) agregar un trabajo(si) 
-// 5)poner de una vez por todas el spinner
-// cuando esten todas la funciones hechas voy a corregir un poco mas las card de info
-// seguir agregando la información a la mockapi
