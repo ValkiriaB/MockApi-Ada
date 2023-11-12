@@ -121,13 +121,14 @@
           <input type="text" class="form-control" id="add-long-term">
         </div>
         <div class=" row g-2 mt-4 mb-3">
+
+       <div class="col-md" style="width: 10rem;">
+        <label for="add-salary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="add-salary" >
+        </div> 
+
           <h6>Benefits:</h6>
-      
-          <div class="col-md" style="width: 10rem;">
-            <label for="add-salary" class="form-label">Salary</label>
-            <input type="number" class="form-control" id="add-salary" >
-          </div> 
-          
+    
           <div class="col-md" style="width: 10rem;">
           <label for="add-vacation" class="form-label">vacation</label>
           <input type="text" class="form-control" id="add-vacation" >
@@ -170,13 +171,19 @@
       </section>
 
 
-
     <!-- Edit Jobs -->
 
     <section  class="view w-75 d-flex flex-column justify-content-center visually-hidden " id="edit-job"> 
-      <form class=" grid gap-3" id="edit-form">
-       <div class="mb-3 ">
+      <form class="grid gap-3" id="edit-form">
 
+        <div class="mb-3 ">
+          <label for="edit-image" class="form-label ">
+           Image
+         </label>
+         <input type="url" class="form-control" id="job-image" aria-describedby="job-image" placeholder="url Image">
+         </div>
+
+       <div class="mb-3 ">
          <label for="edit-title" class="form-label">Job Title</label>
          <input type="text" class="form-control" id="edit-title">
        </div>
@@ -202,18 +209,28 @@
          <input type="text" class="form-control" id="edit-category">
        </div>
 
+       <div class="mb-3 ">
+        <label for="adit-long-term" class="form-label">Long term</label>
+        <input type="text" class="form-control" id="edit-long-term">
+      </div>
+
+      <div class="col-md" style="width: 10rem;">
+        <label for="edit-salary" class="form-label">Salary</label>
+        <input type="text" class="form-control" id="edit-salary" >
+      </div> 
+
        <div class=" row g-2 mt-4 mb-3">
          <h6>Benefits:</h6>
-     
-         <div class="col-md" style="width: 10rem;">
-           <label for="edit-salary" class="form-label">Salary</label>
-           <input type="text" class="form-control" id="edit-salary" >
-         </div> 
-         
+
          <div class="col-md" style="width: 10rem;">
          <label for="edit-vacation" class="form-label">vacation</label>
          <input type="text" class="form-control" id="edit-vacation" >
          </div>
+
+         <div class="col-md" style="width: 10rem;">
+          <label for="edit-health_ensurance" class="form-label"> Health ensurance</label>
+          <input type="text" class="form-control" id="edit-health-ensurance" >
+          </div>
 
            <div class="col-md" style="width: 10rem;">
            <label for="edit-birth-license" class="form-label">Birth license</label>
@@ -224,7 +241,7 @@
            <label for="edit-additional" class="form-label">Additional</label>
            <input type="text" class="form-control" id="edit-additional" >
            </div>
-           
+          
            <div class="col-md" style="width: 10rem;">
            <label for="edit-internet" class="form-label">Internet paid</label>
            <input type="text" class="form-control" id="edit-internet" >
@@ -239,8 +256,9 @@
         </div> 
         
        </div>
+
        <button class="btn btn-primary" id="submit-change" type="button">Submit</button>
-      
+       <button type="reset" id="submit-cancel"class="btn btn-secondary">Cancel</button>
      </form>
 
 

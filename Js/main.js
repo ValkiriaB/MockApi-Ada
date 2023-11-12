@@ -18,6 +18,7 @@ const ShowForm = () => {
 }
 
 
+
 // Hide select 
 const showSelect = () => {
   $("#select").classList.remove("hidden");
@@ -90,7 +91,7 @@ const DetailJobs = ({
           <h6><span class="badge" id="span" style="margin-top: 10px;">${seniority}</span></h6>
           </div>
       
-          <button type="button" id="btn-edit-job" onclick=FormEdit(${id})  class="btn btn-success" style="margin-top: 2rem;"">Edit</button>
+          <button type="button" id="btn-edit-job" onclick=FormEdit(${id}) class="btn btn-success" style="margin-top: 2rem;"">Edit</button>
           <button type="button" id="btn-delete" onclick=jobDelete(${id}) class="btn btn-danger"style="margin-top: 2rem;">Delete</button>
       </div>
     </div>
@@ -98,7 +99,7 @@ const DetailJobs = ({
     `
   }
     
-// Alert btn Cancel 
+
 
 
 
@@ -213,44 +214,59 @@ const cleanForm = () => {
 
 const FormEdit = ({
 
-  id,
-  name, 
-  description, 
-  seniority,
-   languages,
-  location,
-  category,
-  salary,
+      image,
+      name,
+      description,
+      location,
+      category,
+      seniority,
+      vacation,
+      health_ensurance,
+      birth_license,
+      additional,
+      internet_paid,
+      salary,
+      languages,
+      long_term,
 
   }) =>{
- 
-    $("#edit-title").value = name;
-    $("#edit-description").value = description;
-    $("#edit-seniority").value= seniority;
+   showView("edit-job")
+    $("#edit-imagen").value=image;
+    $("#edit-name").value = name;
+    $("#edit-description").value= description;
     $("#edit-location").value= location;
+    $("#edit-seniority").value= seniority;
     $("#edit-category").value= category;
+    $("#edit-long-term").value = long_term;
     $("#edit-salary").value= salary;
-  
-    $("#edit-languages").value = languages,
-      
+    $("#edit-vacation").value = vacation;
+    $("#edit-health_ensurance").value = health_ensurance;
+    $("#edit-birth-license").value = birth_license;
+    $("#edit-additional").value = additional;
+    $("#edit-internet").value = internet_paid;
+    $("#edit-languages").value = languages;
+   
     $("#submit-change").addEventListener("click", () => {
       editJob(id, {
+          image:  $("#edit-imagen").value,
           name: $("#edit-title").value,
           description: $("#edit-description").value,
-          seniority: $("#edit-seniority").value,
           location: $("#edit-location").value,
+          seniority: $("#edit-seniority").value,
           category: $("#edit-category").value,
+          long_term: $("#edit-long-term").value,
           salary: $("#edit-salary").value,
+          vacation: $("#edit-vacation").value,
+          health_ensurance:$("#edit-health_ensurance").value,
+          birth_license: $("#edit-birth-license").value,
+          additional:$("#edit-additional").value,
+          internet_paid: $("#edit-internet").value,
           languages: $("#edit-languages").value,
-
-            
       });
-     
+   
   });
   }
-
-
-
+ $("#submit-cancel").addEventListener("click", () => getJobs());
 
 
 
