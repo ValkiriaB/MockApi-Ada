@@ -75,20 +75,20 @@ const DetailJobs = ({
       <div class="card view" id="detail" style="width:50rem; height:40rem;">
       <div class="card-body">
       <img src="${image}" id="img" class="card-img-top" style="width:30rem" >
-      <ul style="margin-top:20px"> 
+      <div id="card" style="margin-top:20px"> 
           
-            <li >Salary: $${salary}</li>
-            <h6 style="margin-top:1rem">Benefits: </h6>
-            <li>vacation: ${vacation}</li>
-            <li> Health ensurance: ${health_ensurance}</li>
-            <li> Birth license: ${birth_license}</li>
-            <li> Additional: ${additional}</li>
-            <li> Internet Paid: ${internet_paid}</li>
-          </ul>
+            <h6 > ♦️ Salary: $${salary}</h6 >
+            <h6 style="margin-top:1rem">♦️ Benefits: </h6>
+            <h6 > + Vacation: ${vacation}</h6 >
+            <h6 > + Health ensurance: ${health_ensurance}</h6 >
+            <h6 > + Birth license: ${birth_license}</h6 >
+            <h6 > + Additional: ${additional}</h6 >
+            <h6 > ♦️ Internet Paid: ${internet_paid}</h6 >
+          </div>
           <div class="d-flex flex-row grid gap-3">
-          <h6><span class="badge"  id="span" style="margin-top: 10px; ">${languages}</span></h6>
-          <h6><span class="badge" id="span" style="margin-top: 10px;">${category}</span></h6>
-          <h6><span class="badge" id="span" style="margin-top: 10px;">${seniority}</span></h6>
+          <h6><span class="badge"  id="span" style="margin-top: 10px; "> ${languages}</span></h6>
+          <h6><span class="badge" id="span" style="margin-top: 10px;"> ${category}</span></h6>
+          <h6><span class="badge" id="span" style="margin-top: 10px;"> ${seniority}</span></h6>
           </div>
       
           <button type="button" id="btn-edit-job" onclick=FormEdit(${id}) class="btn btn-success" style="margin-top: 2rem;"">Edit</button>
