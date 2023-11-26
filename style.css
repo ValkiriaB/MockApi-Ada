@@ -29,7 +29,7 @@
   border-radius: 5px;
 }
 
-#job-create{
+#job-create , #edit-form{
   margin-left: 15%;
   margin-top: 5%;
 }

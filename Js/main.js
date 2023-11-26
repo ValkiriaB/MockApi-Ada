@@ -92,13 +92,32 @@ const DetailJobs = ({
           </div>
       
           <button type="button" id="btn-edit-job" onclick=FormEdit(${id}) class="btn btn-success" style="margin-top: 2rem;"">Edit</button>
-          <button type="button" id="btn-delete" onclick=jobDelete(${id}) class="btn btn-danger"style="margin-top: 2rem;">Delete</button>
+          <button type="button" id="btn-delete" onclick=alertDelete(${id}) class="btn btn-danger"style="margin-top: 2rem;">Delete</button>
       </div>
     </div>
 
     `
   }
     
+  // Alert delete 
+
+  const alertDelete = (id) => {
+
+    $('#alert-delete').innerHTML = "";
+    $('#alert-delete').innerHTML += `<div class="alert alert-danger d-flex justify-content-around" role="alert">
+        <div class="d-flex align-items-center">
+       <i class="fa-regular fa-trash-can"></i>
+            <div>
+                Are you sure to delete this job?
+            </div>
+        </div>
+        <div>
+            <button type="button" onclick="seeInfoJobs('${id}')" class="btn btn-outline-secondary">Cancel</button>
+            <button type="button" onclick="jobDelete('${id}')" class="btn btn-danger">Delete</button>
+        </div>
+    </div>`
+    showView('alert-delete');
+}
 
 
 
