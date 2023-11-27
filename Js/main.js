@@ -120,10 +120,6 @@ const DetailJobs = ({
 }
 
 
-
-
-
-
 //Filter
 
 //Filter for Category
@@ -266,7 +262,7 @@ const FormEdit = ({
     $("#edit-languages").value = languages;
    
     $("#submit-change").addEventListener("click", () => {
-      editJob(id, {
+      editJob(id,{
           image:  $("#edit-imagen").value,
           name: $("#edit-title").value,
           description: $("#edit-description").value,
@@ -285,7 +281,12 @@ const FormEdit = ({
    
   });
   }
- $("#submit-cancel").addEventListener("click", () => getJobs());
+
+ $("#submit-cancel").addEventListener("click", () => {
+  setTimeout(() => {
+    getJobs();
+     }, 2000)
+ });
 
 
 

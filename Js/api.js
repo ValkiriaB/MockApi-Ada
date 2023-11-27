@@ -33,7 +33,11 @@ const editJob = async (id,job) => {
       body: JSON.stringify((job)),
   });
  
-  getJobs();
+  
+  setTimeout(() => {
+    showView("spinner");
+    getJobs();
+     }, 2000)
 };
 
 // Filter
@@ -43,6 +47,7 @@ const jobsfiltered = () => {
     .then((response) => response.json())
     .then((jobs) => { 
        setTimeout(() => {
+        showView("spinner");
         renderJobs(jobsFiltered(jobs));
        }, 2000)
       
